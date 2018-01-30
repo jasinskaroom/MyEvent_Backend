@@ -1,0 +1,8 @@
+*
+!public/
+!qrcode/
+!event_logo/
+!event_banner/
+!game/
+!event/
+!.gitignore

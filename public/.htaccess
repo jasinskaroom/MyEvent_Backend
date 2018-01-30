@@ -1,0 +1,32 @@
+Header set Access-Control-Allow-Origin "*"
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+# cache images/pdf docs for 1 week
+<FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif)$">
+  Header set Cache-Control "max-age=604800, public, must-revalidate"
+  Header unset Last-Modified
+</FilesMatch>
+# cache html/htm/xml/txt diles for 2 days
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "max-age=172800, must-revalidate"
+</FilesMatch>

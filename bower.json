@@ -1,0 +1,21 @@
+{
+  "name": "QRSystem",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Terry Tan YongSheng <tanyongsheng0805@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "switchery": "^0.8.2",
+    "bootstrap-fileinput": "^4.4.2"
+  }
+}

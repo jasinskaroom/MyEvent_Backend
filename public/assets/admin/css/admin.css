@@ -1,0 +1,20 @@
+footer {
+  background-color: inherit;
+}
+
+.btn-link {
+  padding: 0 !important;
+}
+
+.form-delete {
+  display: inline;
+}
+
+.small-logo {
+  height: 100px;
+}
+
+.thumbnail {
+  background-color: #afafaf;
+}
+
